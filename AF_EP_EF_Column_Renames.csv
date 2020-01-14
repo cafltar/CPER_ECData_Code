@@ -1,0 +1,44 @@
+EPRO,EP_BIO,EFLUX,AMERIFLUX,Units,Notes,Extra_Cols,BioMet
+,,,TIMESTAMP_START,PST,Units are the timezone the data are in,Precipitation_Tot,Rn_0_0_1
+,,,TIMESTAMP_END,PST,,Rn,Swin_0_0_1
+co2_molar_density,co2_molar_density,CO2_molfrac_Avg,CO2,mmolCO2 mol-1,,PAR_density_Avg,Swout_0_0_1
+co2_flux,co2_flux,co2_flux,FC,umolCO2 m-2 s-1,,door_is_open_Hst,Lwin_0_0_1
+qc_co2_flux,qc_co2_flux,Fc_qc_grade,FC_SSITC_TEST,adimensional,,CO2_samples_Tot,Lwout_0_0_1
+co2_strg,co2_strg,NaN,SC,mmolCO2 m-2 s-1,,H2O_samples_Tot,Ts_0_0_1
+H,H,H,H,W m-2,,,Ts_0_0_2
+qc_H,qc_H,H_qc_grade,H_SSITC_TEST,adimensional,,,SWC_0_0_1
+LE,LE,LE,LE,W m-2,,,SWC_0_0_2
+qc_LE,qc_LE,LE_qc_grade,LE_SSITC_TEST,adimensional,,,
+NaN,NaN,NaN,SG,W m-2,,,
+shf_plate_avg,shf_plate_avg,shf_plate_avg,G,W m-2,,,
+H_strg,H_strg,NaN,SH,W m-2,,,
+LE_strg,LE_strg,NaN,SLE,W m-2,,,
+air_temperature,air_temperature,amb_tmpr_Avg,TA_EP,deg C,,,
+sonic_temperature,sonic_temperature,Ts_Avg,T_SONIC,deg C,,,
+ts_var,ts_var,Ts_Std,T_SONIC_SIGMA,deg C,,,
+RH,RH,RH_Avg,RH_EP,%,,,
+VPD,VPD,VPD_air,VPD,kPa,,,
+air_pressure,air_pressure,amb_press_Avg,PA,kPa,,,
+Rn,Rn_0_0_1,Rn,NETRAD,W m-2,,,
+PAR_density_Avg,,PAR_density_Avg,PPFD_IN,mmolPhoton m-2 s-1,,,
+Precipitation_Tot,,Precipitation_Tot,P,mm,,,
+tdr315_wc_Avg(1),tdr315_wc_Avg(1),tdr315_wc_Avg(1),SWC,%,,,
+tdr315_tmpr_Avg(1),tdr315_tmpr_Avg(1),tdr315_tmpr_Avg(1),TS,deg C,,,
+wind_dir,wind_dir,wnd_dir_compass,WD,Decimal degrees,,,
+wind_speed,wind_speed,rslt_wnd_spd,WS,m s-1,,,
+max_wind_speed,max_wind_speed,NaN,WS_MAX,m s-1,,,
+(z-d)/L,(z-d)/L,stability_zL,ZL,adimensional,,,
+L,L,L,MO_LENGTH,m,,,
+u*,u*,u_star,USTAR,m s-1,,,
+Tau,Tau,tau,TAU,kg m-1 s-2,,,
+qc_Tau,qc_Tau,tau_qc_grade,TAU_SSITC_TEST,adimensional,,,
+u_var,u_var,Ux_Std,U_SIGMA,m s-1,,,
+v_var,v_var,Uy_Std,V_SIGMA,m s-1,,,
+w_var,w_var,Uz_Std,W_SIGMA,m s-1,,,
+x_70%,x_70%,NaN,FETCH_70,m,,,
+x_90%,x_90%,FP_90,FETCH_90,m,,,
+x_peak,x_peak,FP_max,FETCH_MAX,m,,,
+SW_In_Avg,Swin_0_0_1,SW_IN,SW_IN,,,,
+SW_Out_Avg,Swout_0_0_1,SW_OUT,SW_OUT,,,,
+LW_In_Avg,Lwin_0_0_1,LW_IN,LW_IN,,,,
+LW_Out_Avg,Lwout_0_0_1,LW_OUT,LW_OUT,,,,

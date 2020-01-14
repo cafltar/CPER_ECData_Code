@@ -1,0 +1,22 @@
+Variable,Val_L,Val_U
+files,C:\\Users\\Eric\\Desktop\\LTAR\\LTAR_National_Projects\\PhenologyInitiative\\EC Data\\Processed\\Unprocessed\\QC_These\\*.csv,
+AF_Cols,C:\\Users\\Eric\\Desktop\\LTAR\\Column_Names\\AF_EP_EF_Column_Renames.csv,
+Join_cols,C:\\Users\\Eric\\Desktop\\LTAR\\LTAR_National_Projects\\PhenologyInitiative\\EC Data\\CPER\\eddypro_EC10_2017_biomet*.csv,
+Format,EPRO,
+EP,FALSE,
+EF,FALSE,
+FN,TRUE,
+Join,FALSE,
+Biomet,FALSE,
+Met,FALSE,
+Flux,TRUE,
+REP,FALSE,
+Despike,TRUE,
+Output,C:\\Users\\Eric\\Desktop\\LTAR\\LTAR_National_Projects\\PhenologyInitiative\\EC Data\\CPER\\LTAR_CPER_EC10_Flux_AF_Format_QC_Data_ESR_20190322.csv,
+REDDY_File,C:\\Users\\Eric\\Desktop\\LTAR\\LTAR_National_Projects\\REDDY\\L2_QC_Gapped_EC_LTAR_CPER_EC10_20170101_20171231.txt,
+MET_QC,C:\\Users\\Eric\\Desktop\\LTAR\\LTAR_National_Projects\\PhenologyInitiative\\EC Data\\CPER\\LTAR_CPER_Meteorology_EC10_QC_Data_ESR_20190322.csv,
+LE_B,-150,1000
+H_B,-150,1000
+F_B,-60,20
+T_B,0,5
+grade,1,
