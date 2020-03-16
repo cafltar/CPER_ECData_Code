@@ -40,7 +40,7 @@ dt = []
 for K in range (0,len(files)):
 #Read in data and concat to one dataframe; no processing until data all read in - data formatted from EddyPro FullOutput        
     if EP == True:
-        df = pd.read_csv(files[K],header= 0,sep=',',low_memory=False)
+        df = pd.read_csv(files[K],header= 0,sep=',',skiprows=[1], low_memory=False)
         data= pd.concat([data,df], sort='True')
         data.index = data['date']+' '+data['time'] # Eddypro outputs both time and date as separate columns
 #        data =data.drop(['filename'],1) # not needed string-based column; gets in the way of converting to floating point
@@ -96,8 +96,8 @@ for K in range (0,len(files)):
         for k in range (2,len(AF)):
             if AF[Format][k] in cls:
                 qn = AF[Format][k] == cls
-                AF_Out = AF_Out.rename(columns={cls[qn][0]:AF['AmeriFlux'][k]})
-                print('Converting ',AF[Format][k],' to ',AF['AmeriFlux'][k])
+                AF_Out = AF_Out.rename(columns={cls[qn][0]:AF['AMERIFLUX'][k]})
+                print('Converting ',AF[Format][k],' to ',AF['AMERIFLUX'][k])
 # In case SW_IN not a part of the initial data set; this conversion can work
         if 'SW_IN' not in AF_Out.columns:
             if 'PPFD' in AF_Out.columns:        
@@ -110,7 +110,7 @@ for K in range (0,len(files)):
         AF_Out['TIMESTAMP_START']= AF_Out.TIMESTAMP_START.map(lambda x: datetime.datetime.strftime(x, '%Y%m%d%H%M'))
         AF_Out['TIMESTAMP_END']= AF_Out.TIMESTAMP_END.map(lambda x: datetime.datetime.strftime(x, '%Y%m%d%H%M'))
 # Format columns into a same order as in the input *.csv file because housekeeping is always good
-        acl = AF['AmeriFlux']
+        acl = AF['AMERIFLUX']
         tt = acl[acl.isin(AF_Out.columns)]
         AF_Out_QC=AF_Out[tt]   
 
@@ -159,6 +159,6 @@ for K in range (0,len(files)):
     cols.insert(0,cols.pop(cols.index('TIMESTAMP_START')))
     cols.insert(1,cols.pop(cols.index('TIMESTAMP_END')))
     AF_Out_QC = AF_Out_QC.reindex(columns = cols) 
-    # AF_Out_QC.to_csv(files[K][:-4]+'_QC.csv',index = False)
+    AF_Out_QC.to_csv(files[K][:-4]+'_QC.csv',index = False)
 #    AF_Out_QC.to_csv(Driver['Val_L']['Output'], index = False)
 else: print('Select either EF or EP as true')
