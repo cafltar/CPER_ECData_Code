@@ -7,6 +7,10 @@ Laboratory for Atmospheric Research
 Dept. of Civil and Environmental Engineering
 Washington State University
 eric.s.russell@wsu.edu
+
+Main driver for the QC processing of the flux data.
+By this point all data should be in the correct format for this script; assuming AmeriFlux format generally.
+
 """
 import re
 import pandas as pd
