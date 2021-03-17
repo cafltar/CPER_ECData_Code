@@ -7,6 +7,11 @@ Laboratory for Atmospheric Research
 Dept. Civil and Environ. Engineering
 Washington State University
 eric.s.russell@wsu.edu
+
+Formats the data into needed headers for the REddyProc input format.
+Assumes all units are in the correct form and only converts time to the correct form and names column headers based off the column name library (hard-coded)
+Operates off the AmeriFLux column header basis for consistency; often last step in workflow
+
 """
 
 import pandas as pd
@@ -15,6 +20,7 @@ from datetime import datetime
 def REddy_Format(CE, FileName, col_str):
     #Column names for Reddy and equivalent in the initial dataset; does need to be changed when used within the broader context; will de-hardcode in future updates
     cols = pd.read_csv(r'C:\Users\Eric\Desktop\LTAR\LTAR_National_Projects\PhenologyInitiative\Reddy_Cols.csv',header=0)
+    # Make sure is a dataframe
     z = pd.DataFrame(CE.index)
     z = z[0].astype(str)
     #Empty variables for the time converts
@@ -30,7 +36,7 @@ def REddy_Format(CE, FileName, col_str):
     #Find the half-hour and add the 0.5 to the timestamp to match correct format
     qn = M==30
     H[qn] = H[qn]+0.5
-    #Start building final dataframe output with time-based index
+    #Start building final dataframe (Outa) output with time-based index
     Outa = []; Outa = pd.DataFrame(Outa)
     Outa['Year'] = Y[0]; Outa['DoY'] = adate[0]; Outa['Hour'] = H[0]
     Outa.index = CE.index
